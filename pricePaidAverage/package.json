@@ -9,7 +9,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node server/server.js",
     "dev": "npm-run-all --parallel webpack-*",
     "heroku-postbuild": "webpack -d",
     "webpack-client": "webpack -d --watch",
@@ -40,6 +40,7 @@
     "mongoose": "^5.4.20",
     "morgan": "^1.9.1",
     "npm": "^6.9.0",
+    "pg": "^7.10.0",
     "promise": "^8.0.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
