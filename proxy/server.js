@@ -23,7 +23,7 @@ app.listen(port, () => {
 
 
 app.get('/api/:stockId', (req, res) => {
-  axios.get(`ec2-3-82-127-11.compute-1.amazonaws.com:7001/api/${req.params.stockId}`)
+  axios.get(`http://ec2-54-172-9-8.compute-1.amazonaws.com:8008//api/${req.params.stockId}`)
     .then((data) => {
       res.status(200).json(data.data);
     })

@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 const pool = new Pool({
   user: 'power_user',
   password: '$poweruserpassword',
-  host: 'ec2-3-82-127-11.compute-1.amazonaws.com',
+  host: 'ec2-18-206-231-125.compute-1.amazonaws.com',
   database: 'stocks',
   port: 5432,
 });
