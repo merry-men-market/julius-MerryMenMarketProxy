@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 7000;
 const db = require('../database/index.js');
 
 app.use(express.static(`${__dirname}/../public/`));

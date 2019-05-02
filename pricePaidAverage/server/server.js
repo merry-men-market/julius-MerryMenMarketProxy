@@ -9,7 +9,7 @@ const Pool = require('pg').Pool;
 // const Stock = require('../database/StockPricePaid/StockScheme.js');
 
 const app = express();
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 7001;
 
 // app.use(express.static(`${__dirname}/../public/`));
 app.use(cors());
@@ -19,8 +19,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
 const pool = new Pool({
-  user: '',
-  host: 'localhost',
+  user: 'power_user',
+  password: '$poweruserpassword',
+  host: 'ec2-3-82-127-11.compute-1.amazonaws.com',
   database: 'stocks',
   port: 5432,
 });
@@ -37,7 +38,7 @@ app.get('/api/:id', (req, res) => {
   const id = req.params.id;
   pool.query(`SELECT * FROM stocks where id=${id}`, (error, results) => {
     if (error) {
-      throw error;
+      console.log(error);
     }
     // get prices in floats
     // prices = results.rows[0].prices.split('|').map(ele => parseFloat(ele));

@@ -6,7 +6,8 @@
   "author": "Gary",
   "license": "ISC",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "startService": "node ../pricePaidAverage/server/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
@@ -30,6 +31,7 @@
     "mongoose": "^5.4.20",
     "morgan": "^1.9.1",
     "newrelic": "^5.7.0",
+    "nodemon": "^1.18.11",
     "npm": "^6.9.0",
     "pg": "^7.10.0",
     "promise": "^8.0.3",
